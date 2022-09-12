@@ -43,6 +43,11 @@
                   <option value="{{$status->value}}">{{$status->name}}</option>
                   @endforeach
                 </select>
+                @error('status')
+                <div class="text-sm text-red-400">
+                  {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
             <div class="sm:col-span-6 pt-5">
@@ -54,6 +59,11 @@
                   @endforeach
                 </select>
               </div>
+              @error('location')
+              <div class="text-sm text-red-400">
+                {{ $message }}
+              </div>
+              @enderror
             </div>
             <div class="mt-6 p-4">
               <button type="submit"

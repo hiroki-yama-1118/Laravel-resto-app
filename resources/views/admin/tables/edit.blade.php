@@ -48,6 +48,11 @@
                   </option>
                   @endforeach
                 </select>
+                @error('status')
+                <div class="text-sm text-red-400">
+                  {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
             <div class="sm:col-span-6 pt-5">
@@ -60,6 +65,11 @@
                   </option>
                   @endforeach
                 </select>
+                @error('location')
+                <div class="text-sm text-red-400">
+                  {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
             <div class="mt-6 p-4">

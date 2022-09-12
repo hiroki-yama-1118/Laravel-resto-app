@@ -63,7 +63,6 @@
                   <option value="{{$category->id}}">{{$category->name}}</option>
                   @endforeach
                 </select>
-
               </div>
             </div>
             <div class=" mt-6 p-4">
