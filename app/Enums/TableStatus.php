@@ -6,8 +6,8 @@ enum TableStatus:string
 
 {
     case Pending ='pending';
-    case Avaliable ='avaliable';
-    case Unavaliable ='unavaliable';
+    case Avalaiable ='avalaiable';
+    case Unavalaiable ='unavalaiable';
 
 }
 
