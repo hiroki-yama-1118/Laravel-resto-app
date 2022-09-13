@@ -34,6 +34,7 @@
                       <th scope="col" class="py-3 px-6">
                         Guests
                       </th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -53,6 +54,19 @@
                       </td>
                       <td class="py-4 px-6 font-medium text-gray-500 whitespace-nowrap dark:text-white">
                         {{ $reservation->guest_number}}
+                      </td>
+                      <td class="py-4 px-6 font-medium text-right whitespace-nowrap">
+                        <div class="flex space-x-2">
+                          <a href="{{route('admin.reservations.edit',$reservation->id)}}"
+                            class="px-4 py-2 bg-green-500 hover:bg-green-700 rounded-lg text-white">Edit</a>
+                          <form class="px-4 py-2 bg-red-500 hover:bg-red-700 rounded-lg text-white" method="POST"
+                            action="{{route('admin.reservations.destroy',$reservation->id)}}"
+                            onsubmit="return confirm('Are you sure?')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                          </form>
+                        </div>
                       </td>
                     </tr>
                     @endforeach
